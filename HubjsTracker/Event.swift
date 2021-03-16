@@ -90,7 +90,7 @@ public struct Event: Codable {
     let orderDiscount: Float?
     let orderLastDate: Date?
     
-    let sendImage: Int?
+    let sendImage: String?
 }
 
 extension Event {
@@ -132,6 +132,6 @@ extension Event {
         self.orderDiscount = orderDiscount
         self.orderLastDate = orderLastDate
         self.isCustomAction = isCustomAction
-        self.sendImage = 0
+        self.sendImage = "0"
     }
 }
