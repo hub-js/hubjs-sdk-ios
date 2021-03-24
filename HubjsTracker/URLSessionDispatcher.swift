@@ -101,7 +101,7 @@ public final class URLSessionDispatcher: Dispatcher {
     private func send(request: URLRequest, success: @escaping ()->(), failure: @escaping (_ error: Error)->()) {
         let task = session.dataTask(with: request) { data, response, error in
             // should we check the response?
-            let dataString = String(data: data!, encoding: String.Encoding.utf8)
+            // let dataString = String(data: data!, encoding: String.Encoding.utf8)
             if let error = error {
                 failure(error)
             } else {
