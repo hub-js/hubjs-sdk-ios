@@ -115,7 +115,7 @@ final public class HubjsTracker: NSObject {
     ///   - baseURL: The url of the Hubjs server. This url has to end in `tracking.php`.
     ///   - userAgent: An optional parameter for custom user agent.
     @objc convenience public init(siteId: String, baseURL: URL, userAgent: String? = nil) {
-        let validSuffix = baseURL.absoluteString.hasSuffix("analytics.php") ||
+        let validSuffix = baseURL.absoluteString.hasSuffix("tracking.php") ||
             baseURL.absoluteString.hasSuffix("tracking.php")
         assert(validSuffix, "The baseURL is expected to end in analytics.php or tracking.php")
         
