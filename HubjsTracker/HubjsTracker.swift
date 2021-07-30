@@ -224,7 +224,7 @@ final public class HubjsTracker: NSObject {
     }
     
     internal var visitor: Visitor
-    public var session: Session
+    internal var session: Session
     internal var nextEventStartsANewSession = true
 
     internal var campaignName: String? = nil
