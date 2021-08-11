@@ -6,6 +6,20 @@ import Foundation
 /// * Use the track methods to track your views, events and more.
 final public class HubjsTracker: NSObject {
     
+    /// defines test data viewts return
+    public var viewts: Int {
+        get {
+            return (Int(session.lastVisit.timeIntervalSince1970))
+        }
+    }
+
+    /// defines test data idts return
+    public var idts: Int {
+        get {
+            return (Int(session.firstVisit.timeIntervalSince1970))
+        }
+    }
+    
     /// Defines if the user opted out of tracking. When set to true, every event
     /// will be discarded immediately. This property is persisted between app launches.
     @objc public var isOptedOut: Bool {
